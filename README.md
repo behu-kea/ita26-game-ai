@@ -23,11 +23,11 @@ npm run preview    # lokal forhåndsvisning af dist/
 
 ## Deploy til GitHub Pages
 
-Projektet har en workflow i [deploy.yml](/Users/benjamin-hughes/Documents/projects/ita26-game-ai/.github/workflows/deploy.yml), som bygger og publicerer spillet ved hvert push til `main`.
+`npm run deploy` bygger spillet og publicerer `dist/` til branchen `gh-pages` via pakken `gh-pages`.
 
 1. Push projektet til GitHub (repository `behu-kea/ita26-game-ai`).
-2. Åbn repositoryets **Settings → Pages**, og vælg **Source: GitHub Actions**.
-3. Push til `main` (eller kør workflowet manuelt under **Actions → Deploy to GitHub Pages → Run workflow**).
+2. Kør `npm run deploy` fra projektmappen.
+3. Åbn repositoryets **Settings → Pages**, og vælg **Source: Deploy from a branch**, branch `gh-pages`, mappe `/ (root)`. Det skal kun gøres én gang.
 4. Spillet ligger derefter på `https://behu-kea.github.io/ita26-game-ai/`.
 
 Vite bruger `base: './'` i [vite.config.ts](/Users/benjamin-hughes/Documents/projects/ita26-game-ai/vite.config.ts), så de samme filer virker under understien `/ita26-game-ai/`. Hvis repositoryet får et andet navn, skal intet ændres.
