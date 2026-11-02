@@ -81,7 +81,7 @@ export class AudioEngine {
   private startMusic(): void {
     if (this.paused) return;
     if (!this.music) {
-      this.music = new Audio(`${import.meta.env.BASE_URL}music.m4a`);
+      this.music = new Audio(`${import.meta.env.BASE_URL}music.mp3`);
       this.music.loop = true;
       this.music.volume = 0.45;
       this.music.muted = this.muted;

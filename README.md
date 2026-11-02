@@ -60,7 +60,7 @@ Segl og opgraderinger: første segl giver stærkere sabel, andet segl giver mere
 - `src/input.ts`, `src/audio.ts`, `src/fx/effects.ts`, `src/ui/hud.ts`
 - `src/style.css` og `index.html`: UI og skærme
 
-Alle modeller er bygget med Three.js-geometri. Baggrundsmusikken er `public/music.m4a` og titelbilledet er `public/title.png`. Øvrig lyd er syntetiseret med Web Audio. Spillet kan gennemføres uden lyd.
+Alle modeller er bygget med Three.js-geometri. Baggrundsmusikken er `public/music.mp3` og titelbilledet er `public/title.png`. Øvrig lyd er syntetiseret med Web Audio. Spillet kan gennemføres uden lyd.
 
 ## Kendte begrænsninger
 
