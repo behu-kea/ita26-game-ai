@@ -21,6 +21,18 @@ npm run build      # typetjek (tsc) og Vite-build til dist/
 npm run preview    # lokal forhåndsvisning af dist/
 ```
 
+## Deploy til GitHub Pages
+
+Projektet har en workflow i [deploy.yml](/Users/benjamin-hughes/Documents/projects/ita26-game-ai/.github/workflows/deploy.yml), som bygger og publicerer spillet ved hvert push til `main`.
+
+1. Push projektet til GitHub (repository `behu-kea/ita26-game-ai`).
+2. Åbn repositoryets **Settings → Pages**, og vælg **Source: GitHub Actions**.
+3. Push til `main` (eller kør workflowet manuelt under **Actions → Deploy to GitHub Pages → Run workflow**).
+4. Spillet ligger derefter på `https://behu-kea.github.io/ita26-game-ai/`.
+
+Vite bruger `base: './'` i [vite.config.ts](/Users/benjamin-hughes/Documents/projects/ita26-game-ai/vite.config.ts), så de samme filer virker under understien `/ita26-game-ai/`. Hvis repositoryet får et andet navn, skal intet ændres.
+
+
 ## Styring
 
 | Input | Handling |
@@ -60,7 +72,7 @@ Segl og opgraderinger: første segl giver stærkere sabel, andet segl giver mere
 - `src/input.ts`, `src/audio.ts`, `src/fx/effects.ts`, `src/ui/hud.ts`
 - `src/style.css` og `index.html`: UI og skærme
 
-Alle modeller er bygget med Three.js-geometri. Baggrundsmusikken er `public/music.mp3` og titelbilledet er `public/title.png`. Øvrig lyd er syntetiseret med Web Audio. Spillet kan gennemføres uden lyd.
+Alle modeller er bygget med Three.js-geometri. Baggrundsmusikken er `public/music.mp3` og titelbilledet er `src/assets/title.png`. Øvrig lyd er syntetiseret med Web Audio. Spillet kan gennemføres uden lyd.
 
 ## Kendte begrænsninger
 
